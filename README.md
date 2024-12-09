@@ -19,3 +19,4 @@
   1. All tests (with coverage): run `npm test`
   2. End to End tests: run `npm run test:e2e`
   3. Unit tests: run `npm run test:unit`
+  4. To view test coverage, open the `index.html` located in the coverage folder after running tests.
