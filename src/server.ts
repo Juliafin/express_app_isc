@@ -1,6 +1,6 @@
 import express from 'express';
-
 import { Server } from 'http';
+import { HelloWorldResponse } from './types/responses/helloworld';
 
 export const createServer = (_express: any = express): Server => {
     const app: express.Application = _express();
@@ -8,7 +8,7 @@ export const createServer = (_express: any = express): Server => {
     // Allow reading json for /api routes
     app.use('/api', express.json());
     
-    app.get('/helloworld', (request: express.Request, response: express.Response) => {
+    app.get('/helloworld', (request: express.Request, response: express.Response<HelloWorldResponse>) => {
         response
             .status(200)
             .json({

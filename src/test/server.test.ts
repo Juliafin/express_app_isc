@@ -10,5 +10,5 @@ describe('createServer', () => {
     it('should return an instance of an express server', () => {
         server = createServer();
         expect(server).toBeInstanceOf(Server);
-    })
+    });
 })
