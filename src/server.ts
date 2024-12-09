@@ -2,11 +2,17 @@ import express from "express";
 import { Server } from "http";
 import { HelloWorldResponse } from "./types/responses/helloworld";
 
+/**
+ *
+ * @param _express  express library default export
+ * @returns         instance of express server. to shutdown, run .close()
+ */
 export const createServer = (_express: any = express): Server => {
   const app: express.Application = _express();
 
   // Allow reading json for /api routes
   app.use("/api", express.json());
+
   app.get(
     "/helloworld",
     (
