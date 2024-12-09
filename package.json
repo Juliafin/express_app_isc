@@ -5,6 +5,8 @@
   "main": "build/index.js",
   "scripts": {
     "build": "tsc --build",
+    "prettier:check": "npx prettier ./src --check",
+    "prettier:format": "npx prettier ./src --write",
     "start": "node ./dist/index.js",
     "start:dev": "tsx ./src/index.ts",
     "test": "jest",
@@ -29,6 +31,7 @@
     "@types/supertest": "^6.0.2",
     "http-status-codes": "^2.3.0",
     "jest": "^29.7.0",
+    "prettier": "3.4.2",
     "supertest": "^7.0.0",
     "ts-jest": "^29.2.5",
     "tsx": "^4.19.2",
